@@ -63,7 +63,7 @@ class TestFeatures(TestCase):
 
     # TODO: Add a test of your own below this line
 def test_standard_scaler_custom(self):
-        data = [[1, 2, 3], [4, 5, 6],[7, 8, 9]]
+        data = [[1, 2], [4, 5],[7, 8]]
         scaler = StandardScaler()
         scaler.fit(data)
         scaled_data = scaler.transform(data)
