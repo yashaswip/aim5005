@@ -62,7 +62,7 @@ class TestFeatures(TestCase):
         assert (result == expected).all(), "Scaler transform does not return expected values. Expect {}. Got: {}".format(expected.reshape(1,-1), result.reshape(1,-1))
 
     # TODO: Add a test of your own below this line
-def test_standard_scaler_custom(self):
+    def test_standard_scaler_custom(self):
         data = [[1, 2], [4, 5],[7, 8],[9,10]]
         scaler = StandardScaler()
         scaler.fit(data)
@@ -73,6 +73,6 @@ def test_standard_scaler_custom(self):
         expected_std = np.ones(len(data[0]))
         assert np.allclose(scaled_mean, expected_mean), "Scaled mean is incorrect"
         assert np.allclose(scaled_std, expected_std), "Scaled standard deviation is incorrect"
-    
+
 if __name__ == '__main__':
     unittest.main()
