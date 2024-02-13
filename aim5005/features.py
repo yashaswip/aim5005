@@ -53,7 +53,7 @@ class StandardScaler:
     def fit(self, x: np.ndarray) ->  None:
         x = self._check_is_array(x)
         self.mean = np.mean(x, axis=0)
-        self.std = np.std(axis=0)
+        self.std = np.std(x, axis=0)
         
     def transform(self, x: np.ndarray)-> np.ndarray:
         x = self._check_is_array(x)
@@ -64,4 +64,5 @@ class StandardScaler:
         x = self._check_is_array(x)
         self.fit(x)
         return self.transform(x)
+
 
